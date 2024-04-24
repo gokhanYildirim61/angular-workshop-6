@@ -1,0 +1,11 @@
+
+<form [formGroup]="form" (submit)="onFormSubmit()">
+<div *ngIf="form.get('name')?.errors && form.get('name')?.touched">
+{{form.get('name')?.errors | controlErrorMessage}}
+</div>
+
+ <p></p> Name: <input type="text" formControlName="name"  />
+
+  <button type="submit">Submit</button>
+
+</form>
